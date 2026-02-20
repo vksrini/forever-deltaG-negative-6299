@@ -220,9 +220,13 @@ h1{
 }
 
 .us-photo{
-  width: min(440px, 92%);
+  width: min(420px, 92%);
+  max-height: 52vh;        
+  height: auto;
+  object-fit: cover;       
+  object-position: center;
   display:block;
-  margin: 14px auto 10px;
+  margin: 14px auto 14px;
   border-radius: 18px;
   border: 1px solid rgba(255,255,255,.14);
   box-shadow: 0 14px 40px rgba(0,0,0,.35);
