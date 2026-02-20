@@ -1,0 +1,215 @@
+:root{
+  --bg1:#0b1220;
+  --bg2:#101a33;
+  --card:#0f1a2fdd;
+  --text:#eaf0ff;
+  --muted:#b9c5e6;
+  --accent:#ff5fa2;
+  --accent2:#4d9de0;
+  --good:#06d6a0;
+  --shadow: 0 18px 60px rgba(0,0,0,.45);
+  --radius: 22px;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html,body{
+  height:100%;
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--text);
+  overflow:hidden;
+  background:
+    radial-gradient(1200px 800px at 20% 10%, #1c2d5d 0%, transparent 55%),
+    radial-gradient(1000px 700px at 80% 80%, #3b1d4a 0%, transparent 55%),
+    linear-gradient(140deg, var(--bg1), var(--bg2));
+}
+
+/* Background molecules effect */
+.bg-molecules{
+  position:fixed;
+  inset:0;
+  opacity:.22;
+  background-image:
+    radial-gradient(circle at 15% 25%, rgba(255,255,255,.12) 0 2px, transparent 3px),
+    radial-gradient(circle at 40% 15%, rgba(255,255,255,.10) 0 2px, transparent 3px),
+    radial-gradient(circle at 75% 30%, rgba(255,255,255,.11) 0 2px, transparent 3px),
+    radial-gradient(circle at 60% 70%, rgba(255,255,255,.10) 0 2px, transparent 3px),
+    radial-gradient(circle at 25% 75%, rgba(255,255,255,.10) 0 2px, transparent 3px);
+}
+
+/* Main card */
+.card{
+  position:relative;
+  width:min(720px, 92vw);
+  margin:7vh auto;
+  padding:28px 26px;
+  background:var(--card);
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  backdrop-filter:blur(10px);
+}
+
+.badge{
+  display:inline-block;
+  padding:8px 12px;
+  border-radius:999px;
+  font-weight:700;
+  font-size:12px;
+  letter-spacing:.08em;
+  background:linear-gradient(90deg, rgba(255,95,162,.25), rgba(77,157,224,.25));
+  border:1px solid rgba(255,255,255,.12);
+}
+
+h1{
+  margin:14px 0 10px;
+  font-size:clamp(28px,4vw,44px);
+  line-height:1.08;
+}
+
+.name{
+  background:linear-gradient(90deg, var(--accent), #ffd166);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  font-weight:900;
+}
+
+.subtitle{
+  margin:0 0 18px;
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.45;
+}
+
+.tiny{
+  font-size:14px;
+  opacity:.9;
+}
+
+/* Reaction box */
+.reaction-box{
+  margin:18px 0;
+  padding:14px;
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(0,0,0,.20);
+}
+
+.reaction-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  justify-content:center;
+  font-weight:800;
+}
+
+.progress{
+  margin-top:12px;
+  height:14px;
+  border-radius:999px;
+  background:rgba(255,255,255,.10);
+  overflow:hidden;
+}
+
+.bar{
+  height:100%;
+  width:12%;
+  border-radius:999px;
+  background:linear-gradient(90deg, var(--accent2), var(--accent));
+  transition:width .25s ease;
+}
+
+/* Buttons container */
+.buttons{
+  margin-top:18px;
+  display:flex;
+  gap:14px;
+  justify-content:center;
+  align-items:center;
+  min-height:80px;
+  position:relative;
+}
+
+/* General button style */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:14px 18px;
+  min-width:140px;
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,.14);
+  text-decoration:none;
+  color:white;
+  font-weight:900;
+  cursor:pointer;
+  user-select:none;
+  box-shadow:0 12px 30px rgba(0,0,0,.25);
+  transition:transform .15s ease;
+}
+
+.btn:active{
+  transform:scale(.96);
+}
+
+/* YES button (normal placement) */
+.btn.yes{
+  background:linear-gradient(90deg, rgba(6,214,160,.9), rgba(77,157,224,.9));
+}
+
+/* NO button — IMPORTANT FIX */
+.btn.no{
+  background:linear-gradient(90deg, rgba(255,95,162,.85), rgba(255,209,102,.85));
+  position:fixed;          /* key change */
+  left:60vw;               /* starting position */
+  top:65vh;
+  z-index:9999;            /* always visible */
+}
+
+/* Footer note */
+.footer-note{
+  margin:18px 0 0;
+  text-align:center;
+  color:rgba(255,255,255,.55);
+  font-size:13px;
+}
+
+/* YES page */
+.yes-page{
+  overflow:hidden;
+}
+
+.success{
+  margin-top:10vh;
+  text-align:center;
+}
+
+#confetti{
+  position:fixed;
+  inset:0;
+  width:100%;
+  height:100%;
+}
+
+.love-equation{
+  margin:18px auto 16px;
+  padding:16px;
+  width:min(520px,92%);
+  border-radius:18px;
+  background:rgba(0,0,0,.22);
+  border:1px solid rgba(255,255,255,.10);
+}
+
+.eqn{
+  font-size:28px;
+  font-weight:1000;
+}
+
+.eqn-sub{
+  margin-top:6px;
+  color:rgba(255,255,255,.70);
+}
