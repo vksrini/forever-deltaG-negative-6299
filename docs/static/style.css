@@ -20,7 +20,6 @@ html,body{
   margin:0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color:var(--text);
-  overflow:hidden;
   background:
     radial-gradient(1200px 800px at 20% 10%, #1c2d5d 0%, transparent 55%),
     radial-gradient(1000px 700px at 80% 80%, #3b1d4a 0%, transparent 55%),
@@ -180,7 +179,7 @@ h1{
 
 /* YES page */
 .yes-page{
-  overflow:hidden;
+  overflow-y: auto;
 }
 
 .success{
@@ -220,13 +219,12 @@ h1{
 }
 
 .us-photo{
-  width: min(420px, 92%);
-  max-height: 52vh;        
+  width: min(380px, 88%);
+  max-height: 45vh;      /* smaller height limit */
   height: auto;
-  object-fit: cover;       
-  object-position: center;
+  object-fit: contain;   /* shows full image without cutting */
   display:block;
-  margin: 14px auto 14px;
+  margin: 14px auto 18px;
   border-radius: 18px;
   border: 1px solid rgba(255,255,255,.14);
   box-shadow: 0 14px 40px rgba(0,0,0,.35);
