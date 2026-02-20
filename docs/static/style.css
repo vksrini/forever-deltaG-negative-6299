@@ -213,3 +213,18 @@ h1{
   margin-top:6px;
   color:rgba(255,255,255,.70);
 }
+
+@keyframes popIn {
+  0%   { transform: scale(.92); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.us-photo{
+  width: min(440px, 92%);
+  display:block;
+  margin: 14px auto 10px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.14);
+  box-shadow: 0 14px 40px rgba(0,0,0,.35);
+  animation: popIn .45s ease-out;
+}
